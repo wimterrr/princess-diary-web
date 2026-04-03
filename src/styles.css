@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light;
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #241819;
+  background:
+    radial-gradient(circle at top, rgba(241, 219, 196, 0.92), rgba(241, 219, 196, 0) 40%),
+    linear-gradient(180deg, #f7efe2 0%, #efe0d0 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.topbar,
+.layout-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.topbar {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.topbar__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.panel {
+  border: 1px solid rgba(73, 42, 38, 0.18);
+  border-radius: 22px;
+  background: rgba(255, 249, 244, 0.88);
+  padding: 20px;
+  box-shadow: 0 16px 40px rgba(73, 42, 38, 0.08);
+}
+
+.panel--stack {
+  display: grid;
+  gap: 12px;
+}
+
+.panel--history {
+  margin-top: 16px;
+}
+
+.hero h1,
+.panel h2,
+.ending-title {
+  margin: 0 0 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: #83554b;
+}
+
+.lede,
+.beat,
+.status,
+.tags,
+.history span {
+  color: #5f4541;
+}
+
+.choice-list {
+  display: grid;
+  gap: 12px;
+}
+
+.choice-card,
+.ghost {
+  border: 1px solid rgba(104, 53, 44, 0.22);
+  border-radius: 18px;
+  background: #fff9f1;
+  cursor: pointer;
+}
+
+.choice-card {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+}
+
+.choice-card:hover,
+.ghost:hover {
+  border-color: rgba(104, 53, 44, 0.6);
+  transform: translateY(-1px);
+}
+
+.choice-card__label {
+  font-weight: 700;
+}
+
+.choice-card__meta {
+  font-size: 0.9rem;
+  color: #744e46;
+}
+
+.choice-card__note {
+  font-size: 0.95rem;
+}
+
+.meter-list,
+.history {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.meter-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.receipt p {
+  margin-top: 0;
+}
+
+.ghost {
+  padding: 10px 14px;
+}
+
+@media (min-width: 800px) {
+  .layout-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  }
+}
